@@ -10,6 +10,8 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
+                    <br>
+                    <a href="{{ route('chirps.index') }}" class="text-blue-500 hover:text-blue-700">View Messages</a>
                 </div>
             </div>
         </div>
