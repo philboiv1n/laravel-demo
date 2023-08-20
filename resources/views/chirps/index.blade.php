@@ -52,6 +52,10 @@
                                     <x-dropdown-link :href="route('chirps.edit', $chirp)">
                                         {{ __('Éditer') }}
                                     </x-dropdown-link>
+                                    <x-dropdown-link onclick="showModal({{ $chirp->id }})" style="cursor:pointer;">
+                                        Effacer
+                                    </x-dropdown-link>
+
                                 </x-slot>
                             </x-dropdown>
                             @endif
@@ -69,4 +73,48 @@
         </div>
 
     </div>
+
+    <!-- Temporary inline CSS styling for the modal -->
+    <div id="deleteModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000; text-align: center; padding-top: 20%;">
+    <div class="bg-white shadow-sm rounded-lg p-6" style="width:300px; margin: 0 auto;">
+        <p>Voulez-vous vraiment effacer ce message?</p>
+        <button style="margin: 12px 5px 0 5px; padding: 2px 6px; border: 1px solid #ccc;" onclick="deleteChirp()">Oui</button>
+        <button style="margin: 12px 5px 0 5px; padding: 2px 6px; border: 1px solid #ccc;" onclick="closeModal()">Cancel</button>
+    </div>
+    </div>
+
 </x-app-layout>
+
+<!-- Temporary inline JavaScript for the modal -->
+<script>
+
+let currentChirpId = null;
+
+function showModal(chirpId) {
+    currentChirpId = chirpId;
+    document.getElementById("deleteModal").style.display = "block";
+}
+
+function deleteChirp() {
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = '/chirps/' + currentChirpId;
+    form.style.display = 'none';
+
+    const token = document.createElement('input');
+    token.name = '_token';
+    token.value = '{{ csrf_token() }}';
+    form.appendChild(token);
+
+    const method = document.createElement('input');
+    method.name = '_method';
+    method.value = 'DELETE';
+    form.appendChild(method);
+
+    document.body.appendChild(form);
+    form.submit();
+}
+
+function closeModal() {
+    document.getElementById("deleteModal").style.display = "none";
+}</script>
