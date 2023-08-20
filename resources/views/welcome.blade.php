@@ -36,12 +36,12 @@
                 @if (Route::has('login'))
                 <div class="bg-white shadow-sm rounded-lg p-6">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Se connecter</a>
+                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400  focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Se connecter</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Inscription</a>
+                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Inscription</a>
                         @endif
                     @endauth
                 </div>
@@ -51,13 +51,13 @@
             <div class="justify-center mt-4 sm:items-center sm:justify-between">
                 
                 <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-center sm:ml-0">
-                        <a href="https://www.philboivin.com" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white">
+                        <a href="https://www.philboivin.com" class="group inline-flex items-center">
                             par Philippe Boivin
                         </a>
                 </div>
 
                 <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-center sm:ml-0">
-                    Voir le&nbsp;<a href="https://github.com/philboiv1n/laravel-demo" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white">code source</a>
+                    Voir le&nbsp;<a href="https://github.com/philboiv1n/laravel-demo" class="group inline-flex items-center">code source</a>
                 </div>     
 
                 <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-center sm:ml-0">
