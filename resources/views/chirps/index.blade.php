@@ -9,11 +9,11 @@
             @csrf
             <textarea
                 name="message"
-                placeholder="{{ __('What\'s on your mind?') }}"
+                placeholder="{{ __('À quoi pensez-vous?') }}"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
             >{{ old('message') }}</textarea>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
-            <x-primary-button class="mt-4">{{ __('Send') }}</x-primary-button>
+            <x-primary-button class="mt-4">{{ __('Envoyer') }}</x-primary-button>
         </form>
 
         <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
