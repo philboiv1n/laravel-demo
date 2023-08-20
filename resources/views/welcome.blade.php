@@ -27,11 +27,12 @@
                         </svg>
             </div>
 
-            <div class="flex justify-center p-6">
-            Petit démo Laravel pour Tollé!
+            <div class="flex justify-center text-center p-6">
+            Démo Laravel pour l'Agence Tollé.<br>
+            Mini application de messagerie (prototype incomplet)
             </div>
            
-            <div class="flex justify-center">
+            <div class="flex justify-center p-6">
                 @if (Route::has('login'))
                 <div class="bg-white shadow-sm rounded-lg p-6">
                     @auth
@@ -47,26 +48,25 @@
                 @endif
             </div>
 
-            <div class="flex justify-center mt-16 sm:items-center sm:justify-between">
+            <div class="justify-center mt-4 sm:items-center sm:justify-between">
                 
-                <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0 px-6">
-                    <div class="flex items-center gap-4">
-                        <a href="https://www.philboivin.com" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-center sm:ml-0">
+                        <a href="https://www.philboivin.com" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white">
                             par Philippe Boivin
                         </a>
-                    </div>
                 </div>
 
-                <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0 px-6">
-                    <!-- Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }}) -->
-                    Voir le&nbsp;<a href="https://github.com/philboiv1n/laravel-demo">code source</a>
+                <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-center sm:ml-0">
+                    Voir le&nbsp;<a href="https://github.com/philboiv1n/laravel-demo" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white">code source</a>
                 </div>     
+
+                <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-center sm:ml-0">
+               Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+            </div>
                   
             </div>
 
-            <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-center sm:ml-0">
-               Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-            </div>
+           
 
         </div>
     </div>
