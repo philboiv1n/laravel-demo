@@ -79,7 +79,7 @@
     <div class="bg-white shadow-sm rounded-lg p-6" style="width:300px; margin: 0 auto;">
         <p>Voulez-vous vraiment effacer ce message?</p>
         <button style="margin: 12px 5px 0 5px; padding: 2px 6px; border: 1px solid #ccc;" onclick="deleteChirp()">Oui</button>
-        <button style="margin: 12px 5px 0 5px; padding: 2px 6px; border: 1px solid #ccc;" onclick="closeModal()">Cancel</button>
+        <button style="margin: 12px 5px 0 5px; padding: 2px 6px; border: 1px solid #ccc;" onclick="closeModal()">Non</button>
     </div>
     </div>
 

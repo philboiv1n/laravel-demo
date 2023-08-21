@@ -2,9 +2,9 @@
     <div class="mb-4 text-sm text-gray-600">
         {{ __('Mot de passe oublié? Aucun problème. Indiquez-nous simplement votre adresse courriel et nous vous enverrons par courriel un lien de réinitialisation de mot de passe qui vous permettra d\'en choisir un nouveau.') }}
     </div>
-    <div class="bg-red-100 p-6">
+    <!-- <div class="bg-red-100 p-6">
         Le serveur de courriel est présentement fermé.<br>
-    </div>
+    </div> -->
 
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
